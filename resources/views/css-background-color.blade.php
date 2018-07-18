@@ -20,11 +20,8 @@
     <script src="{{asset('assets/js/addon/hint/show-hint.js')}}"></script>
     <script src="{{asset('assets/js/addon/hint/css-hint.js')}}"></script>
     <script src="{{asset('assets/js/addon/hint/javascript-hint.js')}}"></script>
-
-
-
     <title>Document</title>
-</head>
+  </head>
 <style type="text/css">
     body{
         background-color: blue;

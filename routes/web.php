@@ -11,9 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/css/background-color', function () {
+    return view('css-background-color');
 });
 Route::get('/css/grid',function(){
   return view('css-grid');
 });
+Route::get('/',function(){
+  return view('register');
+});
+
+use Illuminate\Http\Request;
+// Route::post('/',function(Request $request){
+//
+// });
