@@ -62,11 +62,10 @@ class LoginController extends Controller
           $request->session()->put('datas',['pseudo' => $user_login_pseudo,
             'email' => $user_login_email]);
             $session=$request->session()->get('datas');
-            return view('dashboard-coach')->with('pseudo',$session['pseudo'])->with('email',$session['email'])
-            ->with('becodian_name',$becodian_name);
+            return view('dashboard-coach')->with('pseudo',$session['pseudo'])->with('email',$session['email']);
      }
      else {
-       echo "not connected";
+       redirect('/register');
      }
 
 
