@@ -2,12 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Register</title>
   </head>
   <body>
     <h1>Welcome dear future becodian</h1>
     <h2>Please fill this form to register</h2>
-    <form class="" action="index.html" method="post">
+    <form class="" action="#" method="post">
+        @if ($errors->any())
+          <div class="alert alert-danger">
+              <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+              </ul>
+            </div>
+          @endif
+      <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>" />
       <p><label for="name">Name</label></p>
       <p><input type="text" name="name"/>
       <p><label for="first_name">Firstname</label></p>
