@@ -1,7 +1,9 @@
 <?php
 
 //require '../app/Http/Controllers/sanitizer.php';
-
+//use PHPMailer\PHPMailer\PHPMailer;
+//use PHPMailer\PHPMailer\Exception;
+//require 'vendor/autoload.php';
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,48 +21,17 @@ Route::get('/css/background-color', function () {
 Route::get('/css/grid',function(){
   return view('css-grid');
 });
-Route::get('/register',function(){
-  return view('register');
-});
+
 
 Route::get('/','LoginController@create')->name('contact.create');
 Route::get('/dashboard-apprenant','dashboard@create')->name('dashboard.create');
 Route::get('/dashboard-coach','dashboardCoach@create')->name('dashboardCoach.create');
+Route::get('/register-coach','registerCoachController@create')->name('registerCoachController.create');
+Route::get('/register','registerController@create')->name('registerController.create');
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-Route::post('/register',function(Request $request){
-  $sanitizer= new Sanitizer();
-  $datas=$request->validate([
-    'name' => 'required|string|max:191',
-    'first_name' => 'required|string|max:191',
-    'email' => 'required|email',
-    'pseudo' => 'required|string|max:191',
-    'password' => 'required|string|max:191'
-  ]);
-
-  $name=$sanitizer->sanitize_string($datas['name']);
-  $first_name=$sanitizer->sanitize_string($datas['first_name']);
-  $email=$sanitizer->sanitize_email($datas['email']);
-  $pseudo=$sanitizer->sanitize_string($datas['pseudo']);
-  $password= $sanitizer->sanitize_string($datas['password']);
-  $password=Hash::make($password);
-  $badges=0;
-
-
-  $user=new App\User;
-  $user->name=$name;
-  $user->first_name=$first_name;
-  $user->email=$email;
-  $user->pseudo=$pseudo;
-  $user->password=$password;
-  $user->badges=$badges;
-
-
-  $user->save();
-  return redirect('./');
-});
 
 Route::post('/','LoginController@store')->name('contact.store');
 Route::post('/dashboard-apprenant','dashboard@store')->name('dashboard.store');
 Route::post('/dashboard-coach','dashboardCoach@store')->name('dashboardCoach.store');
+Route::post('/register-coach','registerCoachController@store')->name('registerCoachController.store');
+Route::post('/register','registerController@store')->name('registerController.store');

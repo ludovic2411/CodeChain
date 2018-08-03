@@ -21,6 +21,7 @@ class CreateRegisterTable extends Migration
             $table->string('pseudo')->unique();
             $table->string('password');
             $table->integer('badges');
+            $table->string('remember_token')->nullable();
             $table->timestamps();
 
         });
