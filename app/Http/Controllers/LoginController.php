@@ -9,9 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-  public function create()
+  public function create(Request $request)
   {
-
       return view('login');
   }
   public function store(Request $request)
@@ -38,8 +37,9 @@ class LoginController extends Controller
      $login_key=filter_var($login_infos['key'],FILTER_SANITIZE_STRING);
 
      if ($login_status=='Apprenant') {
-       if (Auth::guard('apprenant')->attempt(['pseudo' => $login_pseudo,'email'=>$login_email, 'password' => $login_password])){
-         return redirect('dashboard-apprenant');
+       if (Auth::guard('apprenant')->attempt(['pseudo' => $login_pseudo,'email'=>$login_email, 'password' => $login_password],true)){
+         return redirect('dashboard-apprenant')->with( session(['pseudo' => $login_pseudo,'email'=>$login_email]));
+        //echo $request->user();
        }else{echo "pok";}
      }else if ($login_status=='Coach'){
        if(Auth::guard('coach')->attempt(['pseudo' => $login_pseudo,'email'=>$login_email, 'password' => $login_password])&& $login_key=="DontMissYourTrain!"){

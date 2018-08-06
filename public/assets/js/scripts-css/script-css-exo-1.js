@@ -2,6 +2,8 @@
 let style_tag=document.getElementsByTagName('style')[0];
 let area=document.querySelector('.empty');
 let body=document.body;
+let form=document.querySelector('.form__exo');
+form.style.visibility="hidden";
 
 console.log(body);
 console.log(style_tag);
@@ -20,6 +22,7 @@ function update(){
   let style_applied=window.getComputedStyle(body,null).getPropertyValue('background-color');
   if (style_applied=='rgb(255, 165, 0)') {
       document.getElementsByTagName('h2')[0].innerHTML='bravo!';
+      form.style.visibility="visible";
   }else {
     document.getElementsByTagName('h2')[0].innerHTML='presque';
     console.log(style_applied);
@@ -40,6 +43,7 @@ function hint(){
   let style_applied=window.getComputedStyle(body,null).getPropertyValue('background-color');
   if (style_applied=='rgb(255, 165, 0)') {
       document.getElementsByTagName('h2')[0].innerHTML='bravo!';
+      form.style.visibility="visible";
   }else {
     document.getElementsByTagName('h2')[0].innerHTML='presque';
     console.log(style_applied);
