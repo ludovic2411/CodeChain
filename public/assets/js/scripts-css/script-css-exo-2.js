@@ -1,6 +1,8 @@
 let style_tag=document.getElementsByTagName('style')[0];
 let area=document.querySelector('.empty');
 let body=document.body;
+let form=document.querySelector('.exo__form');
+form.style.visibility="hidden";
 
 let item_1=document.querySelector('.item-1');
 let item_2=document.querySelector('.item-2');
@@ -11,7 +13,7 @@ let item_6=document.querySelector('.item-6');
 
 
 var editor = CodeMirror(document.getElementById('codeeditor'),{
-    value: "/* Make a grid with 2 rows and 3 columns. Place numbers in reverse order\r (each number has its classname). pair in orange and unpairs in pink */",
+    value: "/* Make a grid with 2 rows and 3 columns.\rThe div for the entire grid is named .empty\r Place numbers in reverse order\r (each number has its classname). pair with orange background and unpairs with pink background */",
     mode: "css",
     tabSize: 5,
     lineNumbers: true,
@@ -52,6 +54,7 @@ function update(){
       && column_5=="2" && row_6=="1"&& column_6=="1" && color_1=="rgb(255, 192, 203)" && color_2=="rgb(255, 165, 0)"
       && color_3=="rgb(255, 192, 203)"&& color_4=="rgb(255, 165, 0)"&& color_5=="rgb(255, 192, 203)"&&color_6=="rgb(255, 165, 0)") {
      document.getElementsByTagName('h2')[0].innerHTML='bravo';
+     form.style.visibility="visible";
    }
 
 }
@@ -74,7 +77,7 @@ function hint(){
 
   style_tag.innerHTML=soluce_editor.getValue();
   let style_applied=window.getComputedStyle(body,null).getPropertyValue('background-color');
-
+  form.style.visibility="visible";
 }
 document.getElementsByTagName('button')[1].addEventListener('click',hint)
 document.getElementsByTagName('button')[0].addEventListener('click',update);

@@ -6,12 +6,18 @@
     <title>Your dashboard</title>
   </head>
   <body>
-    <h1>Welcome dear {{$pseudo}}</h1>
+    <h1>Welcome dear  {{session('pseudo')}}</h1>
     <h2>Let's look at what you have achieved</h2>
-        <p>You have:  {{$badges}} badges for the moment.</p>
+        <p>You have: {{session('badges')}}  badges for the moment.</p>
         <p>Your datas</p>
         <ul>
-          <li>Your mail: {{$email}}</li>
+          <li>Your mail: {{session('email')}} </li>
+          <li><p><a href=<?php echo url('change-infos'); ?>>Change your  personnals informations</a></p></li>
         </ul>
+        <form class="__form_dashboard-apprenant" action="#" method="post">
+          <p>Commence ton apprentissage dés maintenant et découvre le CSS</p>
+          <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>" />
+          <input type="submit" name="submit" value="Go">
+        </form>
   </body>
 </html>

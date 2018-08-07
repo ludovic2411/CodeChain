@@ -36,7 +36,7 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        'apprenant' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
@@ -45,6 +45,10 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'coach' => [
+            'driver' => 'session',
+            'provider' => 'coach',
+        ]
     ],
 
     /*
@@ -69,6 +73,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+        'coach' => [
+              'driver' => 'eloquent',
+              'model' => App\Coaches::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
