@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,6 +17,7 @@
         </ul>
         <form class="__form_dashboard-apprenant" action="#" method="post">
           <p>Commence ton apprentissage dés maintenant et découvre le CSS</p>
+          <p><a href=</p>
           <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>" />
           <input type="submit" name="submit" value="Go">
         </form>
