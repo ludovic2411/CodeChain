@@ -1,4 +1,4 @@
-
+//Par défaut dans Laravel //////////////////////
 // Body
 $body-bg: #f5f8fa;
 
@@ -6,3 +6,28 @@ $body-bg: #f5f8fa;
 $font-family-sans-serif: "Raleway", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+////////////////////////////////////////////////
+
+
+/* _couleurs */
+
+/* Deux couleurs principales de becode */
+$becode-darkblue-color: #16232E;
+$becode-lightblue-color: #63C3D1;
+
+$main-text-color: #757575;
+$main-scrollbar-color: #414339;
+$main-button-bgcolor: #63C3D1;
+
+/* couleurs de l'éditeur de code au centre sur le mockup */
+$cm-bgcolor-color: #272822;
+$cm-bgcolor-dark: #1E1F1C;
+$cm-unselected-tab-color: #414339;
+$cm-tab-text-color: #fff;
+$cm-tab-unselected-text-color: #CCCCC7;
+$cm-scrollbar-color: #414339;
+
+/* colonne de droite sur le mockup */
+$lp-button-bgcolor: #63C3D1;
+$lp-button-iconcolor: #fff;
+$livepreview-adressbar-bgcolor: #f5f5f5;
