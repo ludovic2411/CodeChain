@@ -36,6 +36,7 @@
       <h1>Bonjour cher apprenant</h1>
       <h2>Comment tu t'appelles?</h2>
     </div>
+
     <div class="empty">
       <h3 class="item-1">1</h3>
       <h3 class="item-2">2 </h3>
@@ -51,7 +52,10 @@
     <button>Solution</button>
     </div>
     <div class="right">
-
+      <form class="exo__form" action="#" method="post">
+        <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>" />
+        <input type="submit" name="submit" value="go next">
+      </form>
     </div>
   </section>
 <script id="toscript" type="text/javascript">

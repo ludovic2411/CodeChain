@@ -43,7 +43,10 @@
     <button>Solution</button>
     </div>
     <div class="right">
-
+      <form class="form__exo" action="#" method="post">
+        <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>" />
+        <input type="submit" name="submit" value="go next">
+      </form>
     </div>
   </section>
 <script id="toscript" type="text/javascript">

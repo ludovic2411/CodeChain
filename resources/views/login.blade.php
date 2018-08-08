@@ -28,7 +28,10 @@
         <option value="Coach">Coach</option></select></p>
       <p><label for="key">Clé d'identification</label></p>
       <p><input type="password" name="login_key"/></p>
+      <!-- <p><label for="remember">Remember me</label></p>
+      <p><input type="checkbox" value="remember me" name="remember"/></p> -->
       <p><input type="submit" name="login_submit" value="login"/></p>
+      <p><a href=<?php echo url('/register'); ?>>Not registered? Create an account</a></p>
     </form>
   </body>
 </html>

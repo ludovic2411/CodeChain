@@ -17,9 +17,9 @@ $becodian_acheviement=DB::table('users')->pluck('badges');
   </head>
   <body>
     <section class="dashboard_container">
-    <h1>hello dear coach {{$pseudo}}</h1>
+    <h1>hello dear coach </h1>
     <h2>Let's look at what the futur becode have done</h2>
-    <p>Personnal infos: {{$email}}</p>
+    <p>Personnal infos: </p>
     <section class="main_table">
       <section class="name_row">
         <h3>Name:</h3>
