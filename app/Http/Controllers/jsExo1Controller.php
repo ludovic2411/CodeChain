@@ -19,6 +19,8 @@ class jsExo1Controller extends Controller
       $badges=DB::table('users')->where('email',$email)->value('badges');
       $badges=$badges+1;
       DB::table('users')->where('email',$email)->update(['badges'=>$badges]);
+      $url='http://becodecademy.test/js/exo2';
+      DB::table('users')->where('email',$email)->update(['last_page'=>$url]);
       return redirect('/js/exo2');
     }
 }
