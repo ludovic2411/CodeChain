@@ -1,5 +1,6 @@
 let output=document.getElementsByTagName('script')[8];
-
+let form=document.querySelector('.exo__form');
+form.style.visibility='hidden';
 //Le codemirror
 let editor = CodeMirror(document.getElementById('codeeditor'),{
     value: "//write ten time hello in a paragraph tag",
@@ -15,6 +16,7 @@ function update(){
   console.log(document.querySelector('.empty'));
   if (document.querySelector('.empty').childElementCount==10 && document.querySelector('.empty').children[0].localName=='p' && document.querySelector('.empty').children[0].innerHTML=="hello") {
     document.getElementsByTagName('h2')[0].innerHTML='well done'
+    form.style.visibility="visible";
   }else{
     document.getElementsByTagName('h2')[0].innerHTML='try again'
   }
@@ -33,6 +35,7 @@ function hint(){
   });
   output.innerHTML=soluce_editor.getValue();
   eval(output.innerHTML);
+  form.style.visibility="visible";
 }
 document.getElementsByTagName('button')[1].addEventListener('click',hint)
 document.getElementsByTagName('button')[0].addEventListener('click',update);

@@ -49,6 +49,7 @@
             "@php artisan package:discover"
         ]
     },
+    "phpmailer/phpmailer": "~6.0",
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
