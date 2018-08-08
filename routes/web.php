@@ -16,19 +16,29 @@
 Route::get('/css/background-color', function () {
     return view('css-background-color');
 });
+
 Route::get('/css/grid',function(){
   return view('css-grid');
 });
+
 Route::get('/register',function(){
   return view('register');
 });
 
+Route::get('/test',function(){
+  return view('index-3columns');
+});
+
 Route::get('/','LoginController@create')->name('contact.create');
+
 Route::get('/dashboard-apprenant','dashboard@create')->name('dashboard.create');
+
 Route::get('/dashboard-coach','dashboardCoach@create')->name('dashboardCoach.create');
 
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Hash;
+
 Route::post('/register',function(Request $request){
   $sanitizer= new Sanitizer();
   $datas=$request->validate([
@@ -62,5 +72,7 @@ Route::post('/register',function(Request $request){
 });
 
 Route::post('/','LoginController@store')->name('contact.store');
+
 Route::post('/dashboard-apprenant','dashboard@store')->name('dashboard.store');
+
 Route::post('/dashboard-coach','dashboardCoach@store')->name('dashboardCoach.store');

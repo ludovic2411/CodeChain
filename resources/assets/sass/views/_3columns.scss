@@ -1,0 +1,37 @@
+h1{
+    margin:auto;
+    text-align: center;
+}
+
+.navbar-brand img {
+    max-height: 70px;
+}
+
+.three-columns {
+    .row {
+        background-color: grey;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 100vh;
+        color: white;
+    }
+}
+
+
+.first{
+    background-color: black;
+}
+
+.second{
+    background-color: yellow;
+}
+
+.third{
+    background-color: red;
+}
+
+.column{
+    min-height: 90vh;
+    margin-top: 60px;   
+}
