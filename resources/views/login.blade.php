@@ -1,48 +1,59 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Login</title>
-  </head>
-  <body>
-    <main>
+@extends ('layouts.app',['title', 'Becode CodeChain (Aplha) - login'])
 
-      <header>
-        <img src="/assets/img/app_image192.png" alt="Becode CodeChain app image" title="Becode CodeChain app image">
-        {{-- <img src="{{URL::asset('/image/propic.png')}}" alt="profile Pic" height="200" width="200"> --}}
-      </header>
+@section ('main-content')
 
-      <section>
+  <section class="loginform-box">
+    <div class="loginform-img">
+        <img
+        src="/assets/img/app_image192.png"
+        alt="CodeChain app image" 
+        title="CodeChain"
+        >
+    </div>
+    <div class="loginform-wrapper">
       <form class="" action="#" method="post">
+
         @if ($errors->any())
           <div class="alert alert-danger">
               <ul>
                 @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+                  <li>{{ $error }}</li>
                 @endforeach
               </ul>
-            </div>
-          @endif
-      <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>" />
-        <p><label for="pseudo">Pseudo</label></p>
-        <p><input type="text" name="login_pseudo" value=""/></p>
-        <p><label for="email">Email</label></p>
-        <p><input type="email" name="login_email"/></p>
-        <p><label for="password">Password</label></p>
-        <p><input type="password" name="login_password"/></p>
-        <p><label for="status">Vous êtes:</label></p>
-        <p><select name="login_satus">
-          <option value="Apprenant">Apprenant</option>
-          <option value="Coach">Coach</option></select></p>
-        <p><label for="key">Clé d'identification</label></p>
-        <p><input type="password" name="login_key"/></p>
-        <!-- <p><label for="remember">Remember me</label></p>
-        <p><input type="checkbox" value="remember me" name="remember"/></p> -->
-        <p><input type="submit" name="login_submit" value="login"/></p>
-        <p><a href=<?php echo url('/register'); ?>>Not registered? Create an account</a></p>
-      </form>
-      </section>
+          </div>
+        @endif
 
-    </main>
-  </body>
-</html>
+      <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>" />
+
+        <label for="pseudo">Pseudo</label>
+        <input type="text" name="login_pseudo" value=""/>
+        
+
+        <label for="email">Email</label>
+        <input type="email" name="login_email"/>
+        
+
+        <label for="password">Password</label>
+        <input type="password" name="login_password"/>
+        
+        <label for="status">Vous êtes:</label>
+        <select name="login_satus">
+          <option value="Apprenant">Apprenant</option>
+          <option value="Coach">Coach</option>
+        </select>
+        
+      
+        <label for="key">Clé d'identification</label>
+        <input type="password" name="login_key"/>
+        
+        <!-- <label for="remember">Remember me
+          <input type="checkbox" value="remember me" name="remember"/>
+        </label> -->
+        <input type="submit" name="login_submit" value="Login"/>
+        <a href=<?php echo url('/register'); ?>>Not registered? Create an account</a>
+
+      </form>
+    </div>
+  </section>
+
+@endsection

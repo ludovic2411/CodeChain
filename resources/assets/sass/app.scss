@@ -1,12 +1,14 @@
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// // Fonts
+@import url('https://fonts.googleapis.com/css?family=Athiti|Montserrat');
 
-// Variables
+// // Variables
 @import "variables";
 
-// Views 
-
+// // Views 
+@import 'views/general';
+@import 'views/loginform';
 @import 'views/3columns';
 @import 'views/dashboard';
-@import 'views/landing';
+
+@import 'views/general';

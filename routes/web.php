@@ -17,6 +17,12 @@
 Route::get('/test',function(){
   return view('index-3columns');
 });
+
+Route::get('/gen',function(){
+  return view('master'); 
+});
+
+
 Route::get('/','LoginController@create')->name('contact.create');
 
 Route::get('/dashboard-apprenant','dashboard@create')->name('dashboard.create');

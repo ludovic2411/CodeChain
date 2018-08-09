@@ -1,0 +1,219 @@
+@import url(https://fonts.googleapis.com/css?family=Athiti|Montserrat);@charset "UTF-8";
+
+/* Variables */
+
+/* Deux couleurs principales de becode */
+
+/* couleurs de l'éditeur de code au centre sur le mockup */
+
+/* colonne de droite sur le mockup */
+
+/*DMSHD*/
+
+html {
+  height: 100vh;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  /* iOS6-, Safari 3.1-6*/
+  /*Firefox19-*/
+  display: -ms-flexbox;
+  /* IE 10 */
+  /* Chrome */
+  display: flex;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #f5f8fa;
+  font-family: "Athiti", sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+a {
+  color: #16232E;
+}
+
+a:visited {
+  color: #63C3D1;
+}
+
+.loginform-box {
+  background-color: #fff;
+  width: 600px;
+  border-radius: 10px;
+  padding: 1.5em;
+}
+
+.loginform-box .loginform-img {
+  width: 300px;
+}
+
+.loginform-box .loginform-wrapper {
+  width: 300px;
+}
+
+.loginform-box .loginform-wrapper label {
+  font-size: 1em;
+  color: #16232E;
+}
+
+.loginform-box .loginform-wrapper input[type=text],
+.loginform-box .loginform-wrapper input[type=email],
+.loginform-box .loginform-wrapper input[type=password],
+.loginform-box .loginform-wrapper input[type=submit] {
+  color: #16232E;
+  border: 0;
+}
+
+.loginform-box .loginform-wrapper input[type=text],
+.loginform-box .loginform-wrapper input[type=email],
+.loginform-box .loginform-wrapper input[type=password] {
+  width: 100%;
+  height: 30px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #ccc;
+  caret-color: #16232E;
+}
+
+.loginform-box .loginform-wrapper select {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: 0;
+  cursor: help;
+}
+
+.loginform-box .loginform-wrapper input[type=submit] {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #16232E;
+  color: #fff;
+  cursor: pointer;
+}
+
+.loginform-box .loginform-wrapper input[type=submit]:hover {
+  background-color: #63C3D1;
+  color: #16232E;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+}
+
+.navbar-brand img {
+  max-height: 70px;
+}
+
+.three-columns .row {
+  background-color: grey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+}
+
+.first {
+  background-color: black;
+}
+
+.second {
+  background-color: yellow;
+}
+
+.third {
+  background-color: red;
+}
+
+.column {
+  min-height: 90vh;
+  margin-top: 60px;
+}
+
+.dashboard_container .main_table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.dashboard_container .main_table .badges_row p {
+  margin-left: 1vw;
+}
+
+/*DMSHD*/
+
+html {
+  height: 100vh;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  /* iOS6-, Safari 3.1-6*/
+  /*Firefox19-*/
+  display: -ms-flexbox;
+  /* IE 10 */
+  /* Chrome */
+  display: flex;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #f5f8fa;
+  font-family: "Athiti", sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+a {
+  color: #16232E;
+}
+
+a:visited {
+  color: #63C3D1;
+}
+

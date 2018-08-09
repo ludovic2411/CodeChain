@@ -1,4 +1,42 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Athiti|Montserrat");
+/* Variables */
+/* Deux couleurs principales de becode */
+/* couleurs de l'éditeur de code au centre sur le mockup */
+/* colonne de droite sur le mockup */
+/*DMSHD*/
+html {
+  height: 100vh;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  display: -webkit-box;
+  /* iOS6-, Safari 3.1-6*/
+  /*Firefox19-*/
+  display: -ms-flexbox;
+  /* IE 10 */
+  /* Chrome */
+  display: flex;
+  background-color: #f5f8fa;
+  font-family: "Athiti", sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.loginform-container {
+  width: 300px;
+}
+
 h1 {
   margin: auto;
   text-align: center;
@@ -46,5 +84,34 @@ h1 {
 
 .dashboard_container .main_table .badges_row p {
   margin-left: 1vw;
+}
+
+/*DMSHD*/
+html {
+  height: 100vh;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  display: -webkit-box;
+  /* iOS6-, Safari 3.1-6*/
+  /*Firefox19-*/
+  display: -ms-flexbox;
+  /* IE 10 */
+  /* Chrome */
+  display: flex;
+  background-color: #f5f8fa;
+  font-family: "Athiti", sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=app.css.map */

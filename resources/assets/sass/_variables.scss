@@ -1,6 +1,6 @@
 //Par défaut dans Laravel //////////////////////
 // Body
-$body-bg: #f5f8fa;
+$main-bg-color: #f5f8fa;
 
 // Typography
 $font-family-sans-serif: "Raleway", sans-serif;
@@ -9,11 +9,17 @@ $line-height-base: 1.6;
 ////////////////////////////////////////////////
 
 
-/* _couleurs */
+
+
+/* Variables */
+$montserrat: 'Montserrat', sans-serif;
+$athiti: 'Athiti', sans-serif;
+
+$white: #fff;
 
 /* Deux couleurs principales de becode */
-$becode-darkblue-color: #16232E;
-$becode-lightblue-color: #63C3D1;
+$darkblue: #16232E;
+$lightblue: #63C3D1;
 
 $main-text-color: #757575;
 $main-scrollbar-color: #414339;
