@@ -2,7 +2,8 @@
 
 @section ('main-content')
 
-  <section class="loginform-box">
+  <section class="login-box">
+
     <div class="loginform-wrapper">
       
         <img
@@ -54,7 +55,9 @@
         <a href=<?php echo url('/register'); ?>>Not registered? Create an account</a>
 
       </form>
+
     </div>
+  
   </section>
 
 @endsection

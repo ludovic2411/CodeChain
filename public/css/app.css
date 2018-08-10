@@ -366,11 +366,23 @@ html {
   height: 100vh;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
 /* Deux couleurs principales de becode */
 
 /* couleurs de l'éditeur de code au centre sur le mockup */
 
 /* colonne de droite sur le mockup */
+
+/* // // Boutons */
 
 .btn {
   border-radius: 5px;
@@ -398,8 +410,17 @@ html {
   font-weight: normal;
 }
 
+/* // // Liens */
+
+a {
+  color: #63C3D1;
+}
+
+a:visited {
+  color: #63C3D1;
+}
+
 h1 {
-  margin: auto;
   text-align: center;
 }
 
@@ -446,73 +467,80 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #f5f8fa;
   font-family: "Athiti", sans-serif;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-a {
-  color: #63C3D1;
+.main-box {
+  /* main-box */
 }
 
-a:visited {
-  color: #63C3D1;
-}
-
-.loginform-box {
-  background-color: #fff;
-  width: 600px;
+.login-box {
+  width: 400px;
+  max-width: 80%;
   border-radius: 10px;
-  padding: 0 1.5em 2em 1.5em;
+  padding: 0 1.5em 3em 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.05);
 }
 
-.loginform-box .loginform-wrapper {
-  width: 300px;
-}
-
-.loginform-box .loginform-wrapper > img {
+.loginform-wrapper > img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.loginform-box .loginform-wrapper label {
+.loginform-wrapper label {
   font-size: 1em;
   color: #16232E;
 }
 
-.loginform-box .loginform-wrapper input[type=text],
-.loginform-box .loginform-wrapper input[type=email],
-.loginform-box .loginform-wrapper input[type=password] {
+.loginform-wrapper select,
+.loginform-wrapper input[type=text],
+.loginform-wrapper input[type=email],
+.loginform-wrapper input[type=password],
+.loginform-wrapper input[type=submit] {
+  margin-bottom: 10px;
+}
+
+.loginform-wrapper input[type=text],
+.loginform-wrapper input[type=email],
+.loginform-wrapper input[type=password] {
   color: #16232E;
   border: 0;
 }
 
-.loginform-box .loginform-wrapper input[type=text],
-.loginform-box .loginform-wrapper input[type=email],
-.loginform-box .loginform-wrapper input[type=password] {
+.loginform-wrapper input[type=text],
+.loginform-wrapper input[type=email],
+.loginform-wrapper input[type=password] {
   width: 100%;
   height: 30px;
   padding: 12px 20px;
   border-radius: 5px;
-  background-color: #ccc;
+  background-color: #ddd;
   caret-color: #16232E;
 }
 
-.loginform-box .loginform-wrapper select {
+.loginform-wrapper select {
   width: 100%;
   height: 30px;
   border-radius: 5px;
@@ -520,10 +548,34 @@ a:visited {
   cursor: help;
 }
 
-.loginform-box .loginform-wrapper input[type=submit] {
+.loginform-wrapper input[type=submit] {
   width: 100%;
-  height: 30px;
+  height: 45px;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .login-box {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  body {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+
+@media screen and (max-width: 278px) {
+  .login-box .loginform-wrapper select,
+  .login-box .loginform-wrapper input[type=text],
+  .login-box .loginform-wrapper input[type=email],
+  .login-box .loginform-wrapper input[type=password],
+  .login-box .loginform-wrapper input[type=submit] {
+    width: 100%;
+  }
 }
 
 .dashboard_container .main_table {

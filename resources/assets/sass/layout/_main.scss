@@ -6,16 +6,13 @@ body {
     display: flex; 
     height: 100vh;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     background-color: $main-bg-color;
     font-family: $athiti;
-    align-items: center;
-    justify-content: center;
 }
 
-a {
-    color: $lightblue;
-}
-a:visited {
-    color: $lightblue;
+.main-box {
+    /* main-box */
 }

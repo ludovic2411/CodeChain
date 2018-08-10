@@ -18,12 +18,23 @@
 
 <body>
 
-    @yield('header-content')
+    {{-- <header class="header-box">
 
-    @yield('main-content')
+        @yield('header-content')
 
-    @yield('footer')
+    </header> --}}
 
+    <section class="main-box">
+
+        @yield('main-content')
+
+    </section>
+
+    {{-- <footer class="footer-box">
+
+        @yield('footer')
+
+    </footer> --}}
 
 </body>
 
