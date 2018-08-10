@@ -4,6 +4,7 @@
 
   <section class="loginform-box">
     <div class="loginform-wrapper">
+      
         <img
         src="/assets/img/app_image192.png"
         alt="CodeChain app image" 
@@ -49,7 +50,7 @@
         <!-- <label for="remember">Remember me
           <input type="checkbox" value="remember me" name="remember"/>
         </label> -->
-        <input type="submit" name="login_submit" value="Login"/>
+        <input type="submit" class="btn primary" name="login_submit" value="Login"/>
         <a href=<?php echo url('/register'); ?>>Not registered? Create an account</a>
 
       </form>

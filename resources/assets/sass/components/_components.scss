@@ -1,0 +1,21 @@
+.btn {
+    border-radius: 5px;
+}
+
+.primary {
+    background-color: #0c2461;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+    cursor:pointer;
+    &:hover {
+        background: linear-gradient(#81ecec, #78e08f);
+        color: #000;
+        font-weight: normal;
+    }
+    &:active {
+        background: linear-gradient(#78e08f, #81ecec);
+        color: #000;
+        font-weight: normal;
+    }
+}
