@@ -1,14 +1,8 @@
+@import 'base/reset';
+@import 'base/typography';
+@import "base/colors";
 
-// // Fonts
-@import url('https://fonts.googleapis.com/css?family=Athiti|Montserrat');
-
-// // Variables
-@import "variables";
-
-// // Views 
-@import 'views/general';
-@import 'views/loginform';
-@import 'views/3columns';
-@import 'views/dashboard';
-
-@import 'views/general';
+@import 'layout/_3columns';
+@import 'layout/general';
+@import 'layout/loginform';
+@import 'layout/dashboard';

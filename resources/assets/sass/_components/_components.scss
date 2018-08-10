@@ -1,0 +1,12 @@
+.btn {
+    border-radius: 5px;
+}
+
+.primary {
+    background-color: #38ada9;
+    cursor:pointer;
+    color: $white;
+    &:hover {
+        background-color: #78e08f;
+    }
+}

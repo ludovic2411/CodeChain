@@ -3,14 +3,14 @@
 @section ('main-content')
 
   <section class="loginform-box">
-    <div class="loginform-img">
+    <div class="loginform-wrapper">
         <img
         src="/assets/img/app_image192.png"
         alt="CodeChain app image" 
         title="CodeChain"
         >
-    </div>
-    <div class="loginform-wrapper">
+    
+    
       <form class="" action="#" method="post">
 
         @if ($errors->any())

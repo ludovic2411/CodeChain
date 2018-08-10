@@ -3,11 +3,13 @@
     width: 600px;
     border-radius: 10px;
     padding: 1.5em;
-    .loginform-img {
-        width: 300px;
-    }
+    justify-content: center;
     .loginform-wrapper {
         width: 300px;
+        &>img {
+            margin-left: auto;
+            margin-right: auto;
+        }
         label {
             font-size: 1em;
             color: $darkblue;
@@ -36,14 +38,6 @@
             width: 100%;
             height: 30px;
             margin-top: 10px;
-            border-radius: 5px;
-            background-color: $darkblue;
-            color: $white;
-            cursor: pointer;
-            &:hover {
-                background-color: $lightblue;
-                color: $darkblue;
-            }
         }
     }
 }
